@@ -23,7 +23,7 @@ async function loadWords(){
 
 loadWords().then((words) => {
     wordInput.addEventListener('keyup', (e) =>{
-        if(e.keyCode == 32 || e.keyCode == 13 && gameFinished == false){
+        if(e.keyCode == 32 && gameFinished == false){
             //new word
             if(wordCorrect(wordInput.value,currentWord.innerText)){
                 wordsCompleted ++;
