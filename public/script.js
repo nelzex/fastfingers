@@ -6,7 +6,7 @@ const startButton = document.getElementById('start');
 const time = document.getElementById('time');
 
 
-let timeLeft = 3;
+let timeLeft = 60;
 var gameFinished = false;
 let timeInterval;
 var restart = false;
@@ -47,7 +47,7 @@ loadWords().then((words) => {
         }
         if(gameFinished == true){
             clearInterval(timeInterval);
-            timeLeft = 3;
+            timeLeft = 60;
             wpm.innerText = "";
             currentWord.innerText ="";
             time.innerHTML = "";
